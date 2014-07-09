@@ -26,6 +26,9 @@ class Calculatrice:
 
     """
     def __init__(self, s):
+        """
+        init
+        """
         self.numList, self.opList = parser.parser(s)
 
     def nombre_op(self):
@@ -37,6 +40,9 @@ class Calculatrice:
     def calcul(self):
         """
         calcul du résultat de l'expression
+
+        >>> Calculatrice('2 + 2').calcul()
+        4.0
         """
         res = 0
         for o, num in zip(self.opList, self.numList):
@@ -51,3 +57,5 @@ if __name__ == '__main__':
 
     c.calcul()
     print c.nombre_op()
+#    import doctest
+#    doctest.testmod(verbose=True)

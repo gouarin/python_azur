@@ -12,7 +12,5 @@ def myProdScal(x, y):
     """
     Produit scalaire pour 2 tableaux x et y de dimension 2.
 
-    On les remet en 1D avant de faire le produit scalaire.
-
     """
     return np.sum(x*y)
