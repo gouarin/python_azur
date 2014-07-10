@@ -1,0 +1,43 @@
+.. pyShift - copyright JDEV 2013
+
+pyShift - Rigid Motion for 3D Grids
+===================================
+
+**pyShift** module features include a cartesian mesh generator and a rigid 3D
+grid motion.
+Grids, or meshes, are 3D structured meshes with (``i``, ``j``, ``k``) 
+indexes.
+
+Availble grid generators are:
+
+ * square ([#N1]_)
+ * rectangle 
+ * cube 
+ * parallepipède
+
+The cartesian grid defines x,y,z points in a 3 dimensions (i,j,k) array.
+Coordinates go from 1 to N for N points, N is the parameter for the grid
+generation [#N2]_.
+ 
+.. [#N1] topological dim is 2, physical dims is 3
+
+The module uses *numpy* arrays for grids coordinates.
+
+.. rubric:: Footnotes
+
+.. [#N2] The first and the last point of the grid are included,
+         a parameter value of 3 for a square generates a square of 9 points.
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+   Grid generation <gengrids>
+   Rigid motion <motion>
+   installation
+   other
+
+* :ref:`genindex`
+* :ref:`search`
+

@@ -1,0 +1,21 @@
+
+
+Installation
+------------
+
+The module is a standard python module::
+
+  python setup.py build
+
+You have to compile the fortran lib first::
+
+  (cd pyShift/lib; make)
+
+To clean the installation::
+
+  python setup.py clean
+
+The documentation generation (requires Sphinx)::
+
+  ./doc/doc.sh
+

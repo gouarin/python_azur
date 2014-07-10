@@ -1,0 +1,76 @@
+
+Cartesian grid generation
+-------------------------
+
+The grids are cartesian grids, all cells have the same size in all directions.
+The required parameters are the number of points per side for the grid
+paralellepiped.
+
+.. figure:: images/square.png
+   :align: center
+
+   square from ``a``
+  
+.. figure:: images/rectangle.png
+   :align: center
+
+   rectangle from ``a,b``  
+
+Grid generation functions are::
+
+ square(i)
+
+ rectangle(i, j)
+
+ cube(i)
+
+ parallelepiped(i, j, k)
+
+Each function returns a *numpy* [#N1]_ array with point coordinates,
+the whole is a cartesian grid (or mesh).
+Mesh dimensions are ``(3,i,j,k)``, the first dim is x,y,z, then each
+side of the paralellepiped is i,j and k. Any returned mesh has such a 
+`shape <http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html#numpy.ndarray.shape>`_
+
+The table hereafter summerize the function results w.r.t. parameters:
+les dimensions obtenues:
+
+.. index:: 
+   single: parameters
+   triple: shape; dimension; grid; mesh
+
+Mesh dimensions
+~~~~~~~~~~~~~~~
+
++-----------------+--------+---+---+---+
+| mesh            | params | i | j | k |
++=================+========+===+===+===+
+| square          | a      | a | a | 1 |
++-----------------+--------+---+---+---+
+| rectangle       | a,b    | a | b | 1 |
++-----------------+--------+---+---+---+
+| cube            | a      | a | a | a |
++-----------------+--------+---+---+---+
+| parallelepiped  | a,b,c  | a | b | c |
++-----------------+--------+---+---+---+
+
+.. [#N1] see  http://www.numpy.org
+
+Grid generation
+===============
+
+Cython Module
++++++++++++++
+
+.. automodule:: pyShift.gengrid_stub
+   :members:
+   :undoc-members:
+
+Fortran Module
+++++++++++++++
+
+.. toctree:: 
+
+   gen3d
+
+.. include:: gen3d.txt   

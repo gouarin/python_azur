@@ -1,0 +1,17 @@
+
+Rigid Motion
+------------
+
+The motion is a translation and a rotation with an arbitrary axis.
+**Ttranslation** is defined by a three coordinates vector ``(x,y,z)``.
+
+**Rotation** requires two points for the axis, each is a ``(x,y,z)`` tuple,
+and the rotation angle as radian value.
+
+.. image: images/motion.png
+
+The returned matrix is the *Rodrigues* matrix. 
+
+.. automodule:: pyShift.motion
+   :members:
+

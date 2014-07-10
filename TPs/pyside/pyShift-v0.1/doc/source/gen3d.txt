@@ -1,0 +1,13 @@
+
+
+
+gen3d(i,j,k,x,y,z)
+^^^^^^^^^^^^^^^^^^
+
+int i,j,k: max dims (number of points) along i,j and k axis
+x,y,z: numpy arrays already allocated, function fills them
+
+.. warning::
+ 
+   No dimension check
+
