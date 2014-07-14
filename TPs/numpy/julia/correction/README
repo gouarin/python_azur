@@ -1,0 +1,9 @@
+lancer la commande
+
+python setup.py build_ext --inplace
+
+pour avoir la librairie au meme niveau que julia.py
+
+puis tester avec
+
+python julia.py

@@ -8,7 +8,7 @@ LINK_LIBRARIES=[]
 
 setup(name = "heat",
       ext_modules  = [Extension("heat.laplacianCy",
-                                ["heat/laplacianCython.pyx"],
+                                ["heat/laplacianCython.pyx", "heat/extmods/laplacian.c"],
                                 include_dirs = PATH_INCLUDES,
                                 library_dirs = PATH_LIBRARIES,
                                 libraries    = LINK_LIBRARIES,
